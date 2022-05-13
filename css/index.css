@@ -1,0 +1,180 @@
+.main--text-section{
+    max-width: 570px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.text-section--icon{
+    font-size: 4.5rem;
+    color: var(--twitter-blue);
+}
+
+.main--text-section h1{
+    max-width: 520px;
+    margin-top: 50px;
+    font-size: 5rem;
+    font-weight: 700;
+}
+.main--text-section h2{
+    margin-top: 40px;
+    font-size: 3rem;
+}
+
+.text-section--btns{
+    /*min-width: 320px;*/
+    max-width: 352px;
+    text-align: center;
+}
+.btns--google-login,.btns--apple-login{
+    margin-top: 25px;
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    text-align: center;
+    font-weight: 700;
+    border: 1px solid var(--border-gray);
+    border-radius: 20px;
+}
+.btns--google-login:hover{
+    background-color: #d2e3fc;
+}
+.btns--apple-login{
+    margin: 15px 0;
+}
+.btns--apple-login:hover{
+    background-color: #d2e3fc;
+}
+.btns--icon{
+    display: inline-block;
+    vertical-align: middle;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.google-icon{
+    width: 28px;
+    height: 26px;
+    background-image: url('../assets/google_logo.png');
+}
+.apple-icon{
+    width: 17px;
+    height: 20px;
+    margin-right: 8px;
+    background-image: url('../assets/apple_logo.png');
+}
+.btns--register{
+    width: 100%;
+    height: 40px;
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    background-color: var(--twitter-blue);
+    border: 1px solid var(--twitter-blue);
+    border-radius: 20px;
+}
+.btns--register:hover{
+    background-color: #1d8cd7;
+}
+.btns--condicions{
+    margin: 10px auto 0;
+    width: 100%;
+    color: rgb(83, 100, 113);
+    text-align: justify;
+}
+.btns--condicions a{
+    color: rgb(29, 155, 240);
+}
+
+.btns--division-line{
+    position: relative;
+}
+.btns--division-line hr{
+    height: 1px;
+    background-color: var(--border-gray);
+    border: none;
+}
+.btns--division-line span{
+    position: absolute;
+    top: -5px;
+    left: calc(50% - 8.5px);
+    padding: 0 5px;
+    background-color: white;
+}
+
+.btns--login-title{
+    margin-top: 50px;
+    font-size: 1.6rem;
+    color: black;
+    text-align: justify;
+}
+.btns--login-btn{
+    margin-top: 15px;
+    width: 100%;
+    height: 40px;
+    font-weight: 700;
+    color: var(--twitter-blue);
+    background-color: white;
+    border: 1px solid var(--border-gray);
+    border-radius: 40px;
+}
+.btns--login-btn:hover{
+    background-color: #d2e3fc;
+}
+
+
+.main-image-section{
+    width: 100%;
+    height: 305px;
+    position: relative;
+    background-color: var(--twitter-blue);
+}
+.image-section--logo{
+    left: calc(50% - 100px);
+    top: calc(50% - 100px);
+    position: relative;
+    font-size: 20rem;
+    color: white;
+}
+
+
+footer{
+    padding: 20px;
+}
+
+.footer-nav ul{
+    text-align: center;
+}
+
+.footer-nav li{
+    margin: 0 5px;
+    display: inline;
+    font-size: 1.2rem;
+    line-height: 2.4rem;
+    color: rgb(83, 100, 113);
+}
+
+.footer-nav a{
+    text-decoration: none;
+    color: rgb(83, 100, 113);;
+}
+
+@media (min-width: 1000px){
+    .main{
+        display: flex;
+    }
+    .main-image-section{        
+        width: 100%;
+        height: auto;
+        max-width: 50%;
+        min-width: 210px;
+        order: 0;
+    }
+    .main--text-section{
+        width: 790px;
+        max-width: 50%;
+        min-width: 790px;
+        margin: unset;
+        order: 1;
+    }
+}
