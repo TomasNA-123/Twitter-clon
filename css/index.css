@@ -79,7 +79,7 @@
 .btns--condicions{
     margin: 10px auto 0;
     width: 100%;
-    color: rgb(83, 100, 113);
+    color: var(--font-gray-color);
     text-align: justify;
 }
 .btns--condicions a{
@@ -151,12 +151,12 @@ footer{
     display: inline;
     font-size: 1.2rem;
     line-height: 2.4rem;
-    color: rgb(83, 100, 113);
+    color: var(--font-gray-color);
 }
 
 .footer-nav a{
     text-decoration: none;
-    color: rgb(83, 100, 113);;
+    color: var(--font-gray-color);
 }
 
 @media (min-width: 1000px){

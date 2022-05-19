@@ -1,6 +1,7 @@
 :root{
     --twitter-blue: rgb(29, 155, 240);
     --border-gray: #dce3e6;
+    --font-gray-color: rgb(83, 100, 113);
 }
 
 *{
@@ -21,3 +22,9 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
+.d-none{
+    display: none !important;
+}
+.scroll-disabled{
+    overflow-y: hidden !important;
+}

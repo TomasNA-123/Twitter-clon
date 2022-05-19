@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/twitter_logo.svg">
     <title>Twitter two</title>
 
     <!--Google fonts-->
@@ -15,9 +16,69 @@
     <!--Custom css-->
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/index.css">
-
+    <link rel="stylesheet" href="./css/modal-styles.css">
 </head>
-<body>
+<body class="body">
+
+    <!--modals-->
+    <div id="modal_register" class="modal d-none">
+        <div class="modal--main-modal">
+            <section class="main-modal--modal-header">
+                <button class="modal-header__close" onclick="close_modal_register()"><i class="fa-solid fa-xmark"></i></button>
+                <span class="modal-header__icon"><i class="fa-brands fa-twitter"></i></span>
+            </section>
+            <section class="main-modal--modal-body">
+                <h2 class="main-modal__title">Crea tu cuenta</h2>
+                <form class="main-modal--form-modal" action="">
+                    <input class="form-modal--input" type="text" placeholder="Nombre">
+                    <input class="form-modal--input" type="text" placeholder="Teléfono">
+                    <p class="form-modal--use-email"><a href="#">Usar Correo</a></p>
+
+                    <p class="form-modal--date-title">Fecha de nacimiento</p>
+                    <p class="form-modal--date-text">Esta información no será pública. Confirma tu propia edad, incluso si esta cuenta es para una empresa, una mascota u otra cosa.</p>
+                    <div class="form-modal--date-inputs">
+                        <select class="date-inputs--mont" name="" id="">
+                            <option value="1">enero</option>
+                            <option value="2">febrero</option>
+                        </select>
+                        <select class="date-inputs--day" name="" id="">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                        <select class="date-inputs--year" name="" id="">
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                        </select>
+                    </div>
+                    <button class="form-modal--submit">Siguiente</button>
+                </form>
+            </section>
+        </div>
+    </div>
+
+    <div id="modal_login" class="modal d-none">
+        <div class="modal--main-modal">
+            <section class="main-modal--modal-header">
+                <button class="modal-header__close" onclick="close_modal_login()"><i class="fa-solid fa-xmark"></i></button>
+                <span class="modal-header__icon"><i class="fa-brands fa-twitter"></i></span>
+            </section>
+            <section class="main-modal--modal-body modal-body-sm">
+                <h2 class="main-modal__title">Inicia sesión en Twitter</h2>
+                <button class="btns--google-login"><span class="btns--icon google-icon"></span> Registrate con Google</button>
+                <button class="btns--apple-login"><span class="btns--icon apple-icon"></span> Registrate con Apple</button>
+                <div class="btns--division-line">
+                    <hr>
+                    <span>O</span>
+                </div>
+                <input class="form-modal--input margin-top-15px" type="text" placeholder="Teléfono, correo electrónico o nombre de usuario">
+                <button class="form-modal--next">Siguiente</button>
+                <button class="form-modal--forgot-password">¿Olvidaste tu contraseña?</button>
+                <p class="form-modal--register">¿No tienes una cuenta? <a href="#">Regístrate</a></p>
+            </section>
+        </div>
+    </div>
+
+    <!--Main-->
     <main class="main">
         <section class="main--text-section">
             <span class="text-section--icon"><i class="fa-brands fa-twitter"></i></span>
@@ -30,11 +91,11 @@
                     <hr>
                     <span>O</span>
                 </div>
-                <button class="btns--register">Regístrate con el número de teléfono</button>
+                <button class="btns--register" onclick="open_modal_register()">Regístrate con el número de teléfono</button>
                 <p class="btns--condicions">Al registrarte, aceptas los <a href="#">Términos de servicio</a> y la <a href="#"> Política de privacidad</a>, incluida la política de <a href="#">Uso de Cookies</a>.</p>
 
                 <p class="btns--login-title">¿Ya tienes una cuenta?</p>
-                <button id="btn-login" class="btns--login-btn">Iniciar sesión</button>
+                <button id="btn-login" class="btns--login-btn" onclick="open_modal_login()">Iniciar sesión</button>
             </div>
         </section>
         <section class="main-image-section">
@@ -65,5 +126,25 @@
             </ul>
         </nav>
     </footer>
+
+    <script>
+        function open_modal_register(){
+            document.getElementById('modal_register').classList.remove('d-none');
+            document.querySelector('.body').classList.add('scroll-disabled');
+        }
+        function close_modal_register(){
+            document.getElementById('modal_register').classList.add('d-none');
+            document.querySelector('.body').classList.remove('scroll-disabled');
+        }
+
+        function open_modal_login(){
+            document.getElementById('modal_login').classList.remove('d-none');
+            document.querySelector('.body').classList.add('scroll-disabled');
+        }
+        function close_modal_login(){
+            document.getElementById('modal_login').classList.add('d-none');
+            document.querySelector('.body').classList.remove('scroll-disabled');
+        }
+    </script>
 </body>
 </html>
